@@ -19,7 +19,7 @@ public class ProdutoService {
 	public Produto findById(Long id) {
 		Optional<Produto> produto = produtoRepository.findById(id);
 		return produto.orElseThrow(() -> new ObjectNotFoundException(
-				"Objeto não encontrado ID: " + id));
+				"Produto não encontrado ID: " + id));
 	}
 	
 	public List<Produto> findAll() {
